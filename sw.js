@@ -4,4 +4,5 @@ self.addEventListener('install', function(event){
 
 self.addEventListener('activate', function(event){
   console.log('[Service Worker] Activated');
+  return self.clients.claim();
 })
