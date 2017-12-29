@@ -10,6 +10,22 @@
 
     <!-- Title -->
     <title>Colorlib App - App Landing Page</title>
+    <link rel="manifest" href="manifest.json">
+    <mata name="apple-mobile-web-app-capable" content="yes">
+    <mata name="apple-mobile-web-app-status-bar-style" content="black">
+    <mata name="apple-mobile-web-app-title" content="Ca">
+    <link rel="apple-touch-icon" href="img/icon/apple-icon-57x57.png" sizes="57x57">
+    <link rel="apple-touch-icon" href="img/icon/apple-icon-60x60.png" sizes="60x60">
+    <link rel="apple-touch-icon" href="img/icon/apple-icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="img/icon/apple-icon-76x76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="img/icon/apple-icon-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="img/icon/apple-icon-120x120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="img/icon/apple-icon-144x144.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="img/icon/apple-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="img/icon/apple-icon-180x180.png" sizes="180x180">
+    <meta name="msapplication-TileImage" content="img/icon/app-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#834DDF">
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -793,11 +809,20 @@
         <!-- Foooter Text-->
         <div class="copyright-text">
             <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
-            <p>Copyright ©2017 Ca. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            <p>Copyright ©2017 Ca. Designed by <a href="https://elegant-web.github.io/pwaone/" target="_blank">Colorlib</a></p>
         </div>
     </footer>
     <!-- ***** Footer Area Start ***** -->
-
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js')
+            .then(function(){
+              console.log('service worker installed');
+            }).catch(function(){
+              console.log('service worker not installed');
+            })
+        }
+    </script>
     <!-- Jquery-2.2.4 JS -->
     <script src="js/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
